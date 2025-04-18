@@ -1,8 +1,31 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { personalInfo, interests } from "@/lib/data";
+import { 
+  FaCode, FaMobileAlt, FaPaintBrush, 
+  FaDatabase, FaServer, FaCloud,
+  FaLaptopCode, FaBrain, FaGamepad
+} from "react-icons/fa";
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeInterest, setActiveInterest] = useState<number | null>(null);
+  
+  // Function to get the icon component for an interest
+  const getInterestIcon = (iconName: string) => {
+    const iconMap: Record<string, JSX.Element> = {
+      "fa-code": <FaCode className="text-3xl interest-icon" />,
+      "fa-mobile-alt": <FaMobileAlt className="text-3xl interest-icon" />,
+      "fa-paint-brush": <FaPaintBrush className="text-3xl interest-icon" />,
+      "fa-database": <FaDatabase className="text-3xl interest-icon" />,
+      "fa-server": <FaServer className="text-3xl interest-icon" />,
+      "fa-cloud": <FaCloud className="text-3xl interest-icon" />,
+      "fa-laptop-code": <FaLaptopCode className="text-3xl interest-icon" />,
+      "fa-brain": <FaBrain className="text-3xl interest-icon" />,
+      "fa-gamepad": <FaGamepad className="text-3xl interest-icon" />,
+    };
+    
+    return iconMap[iconName] || <FaCode className="text-3xl interest-icon" />;
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -94,10 +117,17 @@ export default function About() {
               {interests.map((interest) => (
                 <div 
                   key={interest.id} 
-                  className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex flex-col items-center text-center"
+                  className={`bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex flex-col items-center text-center transition-all duration-300 interest-card ${activeInterest === interest.id ? 'scale-110 shadow-md bg-gradient-to-br from-gray-100 to-blue-50 dark:from-gray-800 dark:to-gray-700' : ''}`}
+                  onMouseEnter={() => setActiveInterest(interest.id)}
+                  onMouseLeave={() => setActiveInterest(null)}
+                  onClick={() => setActiveInterest(interest.id === activeInterest ? null : interest.id)}
                 >
-                  <i className={`fas ${interest.icon} text-2xl text-primary mb-2`}></i>
-                  <h4 className="font-medium">{interest.name}</h4>
+                  <div className={`text-primary mb-3 transition-all duration-300 ${activeInterest === interest.id ? 'transform scale-125' : ''}`}>
+                    {getInterestIcon(interest.icon)}
+                  </div>
+                  <h4 className={`font-medium transition-all duration-300 ${activeInterest === interest.id ? 'text-gradient' : ''}`}>
+                    {interest.name}
+                  </h4>
                 </div>
               ))}
             </div>
