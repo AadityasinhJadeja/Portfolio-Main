@@ -1,10 +1,13 @@
-import { useEffect, useRef } from "react";
-import { technicalSkills, professionalSkills } from "@/lib/data";
-import { CircleProgress } from "@/components/ui/circle-progress";
+import { useEffect, useRef, useState } from "react";
+import { skills } from "@/lib/data";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+
+type SkillCategory = "technical" | "tool" | "core";
 
 export default function Skills() {
   const sectionRef = useRef<HTMLElement>(null);
-  const skillBarsRef = useRef<HTMLDivElement>(null);
+  const [activeCategory, setActiveCategory] = useState<SkillCategory>("technical");
 
   useEffect(() => {
     const observerOptions = {
@@ -23,16 +26,6 @@ export default function Skills() {
               el.classList.add('in-view');
             }, index * 100);
           });
-
-          // Animate skill bars
-          const skillBars = skillBarsRef.current?.querySelectorAll('.skill-bar');
-          skillBars?.forEach((bar) => {
-            const width = bar.getAttribute('data-width');
-            (bar as HTMLElement).style.width = '0%';
-            setTimeout(() => {
-              (bar as HTMLElement).style.width = width + '%';
-            }, 100);
-          });
         }
       });
     };
@@ -50,51 +43,79 @@ export default function Skills() {
     };
   }, []);
 
+  // Filter skills by category
+  const technicalSkills = skills.filter(skill => skill.category === "technical");
+  const toolSkills = skills.filter(skill => skill.category === "tool");
+  const coreSkills = skills.filter(skill => skill.category === "core");
+
   return (
     <section id="skills" className="py-16 bg-gray-50 dark:bg-gray-900" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">
+        <h2 className="text-3xl font-bold mb-4 text-center">
           My <span className="text-gradient">Skills</span>
         </h2>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+          A showcase of my technical abilities, tools I work with, and core expertise.
+        </p>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="animated-slide-up" ref={skillBarsRef}>
-            <h3 className="text-xl font-bold mb-6">Technical Skills</h3>
-            
-            <div className="space-y-4">
-              {technicalSkills.map((skill) => (
-                <div key={skill.id}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.percentage}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-                    <div 
-                      className="bg-primary h-2.5 rounded-full skill-bar" 
-                      data-width={skill.percentage}
-                      style={{ width: '0%' }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
+        <div className="max-w-4xl mx-auto animated-slide-up">
+          <Tabs defaultValue="technical" className="w-full">
+            <div className="flex justify-center mb-8">
+              <TabsList className="grid grid-cols-3 w-full max-w-md">
+                <TabsTrigger value="technical">Technical Skills</TabsTrigger>
+                <TabsTrigger value="tools">Tools</TabsTrigger>
+                <TabsTrigger value="core">Core Skills</TabsTrigger>
+              </TabsList>
             </div>
-          </div>
-          
-          <div className="animated-slide-up">
-            <h3 className="text-xl font-bold mb-6">Professional Skills</h3>
             
-            <div className="grid grid-cols-2 gap-6">
-              {professionalSkills.map((skill) => (
-                <div key={skill.id} className="text-center">
-                  <CircleProgress 
-                    percentage={skill.percentage} 
-                    className="mb-4"
-                  />
-                  <h4 className="font-medium">{skill.name}</h4>
+            <TabsContent value="technical" className="mt-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-6 text-center">Programming Languages</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {technicalSkills.map((skill) => (
+                    <Badge 
+                      key={skill.id} 
+                      className="px-4 py-2 text-sm bg-blue-100 hover:bg-blue-200 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800"
+                    >
+                      {skill.name}
+                    </Badge>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="tools" className="mt-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-6 text-center">Tools & Frameworks</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {toolSkills.map((skill) => (
+                    <Badge 
+                      key={skill.id} 
+                      className="px-4 py-2 text-sm bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-800"
+                    >
+                      {skill.name}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="core" className="mt-4">
+              <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-6 text-center">Core Expertise</h3>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {coreSkills.map((skill) => (
+                    <Badge 
+                      key={skill.id} 
+                      className="px-4 py-2 text-sm bg-purple-100 hover:bg-purple-200 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                    >
+                      {skill.name}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </section>

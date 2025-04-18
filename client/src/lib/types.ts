@@ -33,16 +33,10 @@ export interface Certification {
   year: string;
 }
 
-export interface TechnicalSkill {
+export interface Skill {
   id: number;
   name: string;
-  percentage: number;
-}
-
-export interface ProfessionalSkill {
-  id: number;
-  name: string;
-  percentage: number;
+  category: 'technical' | 'tool' | 'core';
 }
 
 export interface Interest {

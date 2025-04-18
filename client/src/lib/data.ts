@@ -3,8 +3,7 @@ import {
   Project,
   Education,
   Certification,
-  TechnicalSkill,
-  ProfessionalSkill,
+  Skill,
   Interest,
   PersonalInfo,
 } from './types';
@@ -149,54 +148,96 @@ export const certifications: Certification[] = [
   }
 ];
 
-export const technicalSkills: TechnicalSkill[] = [
+export const skills: Skill[] = [
+  // Technical Skills (Programming Languages)
   {
     id: 1,
     name: "JavaScript",
-    percentage: 90
+    category: "technical"
   },
   {
     id: 2,
-    name: "React",
-    percentage: 85
+    name: "TypeScript",
+    category: "technical"
   },
   {
     id: 3,
-    name: "Node.js",
-    percentage: 80
+    name: "Python",
+    category: "technical"
   },
   {
     id: 4,
-    name: "HTML/CSS",
-    percentage: 95
+    name: "Java",
+    category: "technical"
   },
   {
     id: 5,
-    name: "TypeScript",
-    percentage: 75
-  }
-];
-
-export const professionalSkills: ProfessionalSkill[] = [
+    name: "C++",
+    category: "technical"
+  },
+  
+  // Tools
   {
-    id: 1,
+    id: 6,
+    name: "React",
+    category: "tool"
+  },
+  {
+    id: 7,
+    name: "Node.js",
+    category: "tool"
+  },
+  {
+    id: 8,
+    name: "Docker",
+    category: "tool"
+  },
+  {
+    id: 9,
+    name: "Git",
+    category: "tool"
+  },
+  {
+    id: 10,
+    name: "VS Code",
+    category: "tool"
+  },
+  {
+    id: 11,
+    name: "AWS",
+    category: "tool"
+  },
+  
+  // Core Skills
+  {
+    id: 12,
+    name: "Machine Learning",
+    category: "core"
+  },
+  {
+    id: 13,
+    name: "Generative AI",
+    category: "core"
+  },
+  {
+    id: 14,
+    name: "Supervised Learning",
+    category: "core"
+  },
+  {
+    id: 15,
+    name: "Computer Vision",
+    category: "core"
+  },
+  {
+    id: 16,
+    name: "Natural Language Processing",
+    category: "core"
+  },
+  {
+    id: 17,
     name: "Problem Solving",
-    percentage: 80
-  },
-  {
-    id: 2,
-    name: "Teamwork",
-    percentage: 90
-  },
-  {
-    id: 3,
-    name: "Project Management",
-    percentage: 75
-  },
-  {
-    id: 4,
-    name: "Communication",
-    percentage: 85
+    category: "core"
   }
 ];
 
