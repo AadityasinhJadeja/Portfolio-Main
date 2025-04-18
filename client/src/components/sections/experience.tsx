@@ -1,8 +1,36 @@
 import { useEffect, useRef } from "react";
 import { experiences } from "@/lib/data";
+import { FaBuilding, FaGoogle, FaApple, FaAmazon, FaMicrosoft, FaFacebook } from "react-icons/fa";
+import { SiAdobe, SiNetflix } from "react-icons/si";
 
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
+  
+  // Function to get company icon based on company name
+  const getCompanyIcon = (company: string) => {
+    const iconMap: Record<string, JSX.Element> = {
+      "Google": <FaGoogle className="text-2xl" />,
+      "Microsoft": <FaMicrosoft className="text-2xl" />,
+      "Amazon": <FaAmazon className="text-2xl" />,
+      "Apple": <FaApple className="text-2xl" />,
+      "Facebook": <FaFacebook className="text-2xl" />,
+      "Meta": <FaFacebook className="text-2xl" />,
+      "Netflix": <SiNetflix className="text-2xl" />,
+      "Adobe": <SiAdobe className="text-2xl" />,
+    };
+    
+    // Check if we have an icon for this company
+    for (const [key, icon] of Object.entries(iconMap)) {
+      if (company.toLowerCase().includes(key.toLowerCase())) {
+        return icon;
+      }
+    }
+    
+    // Default icon if no match found
+    return <div className="w-8 h-8 flex items-center justify-center text-xl font-bold bg-gray-200 dark:bg-gray-700 rounded-full">
+      {company.charAt(0)}
+    </div>;
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -56,7 +84,12 @@ export default function Experience() {
                       {experience.period}
                     </span>
                   </div>
-                  <h4 className="text-lg text-gray-600 dark:text-gray-300 mb-4">{experience.company}</h4>
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-10 h-10 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-300 overflow-hidden company-icon-container animate-bounce-subtle">
+                      {getCompanyIcon(experience.company)}
+                    </div>
+                    <h4 className="text-lg text-gray-600 dark:text-gray-300">{experience.company}</h4>
+                  </div>
                   <p className="text-gray-600 dark:text-gray-400">
                     {experience.description}
                   </p>

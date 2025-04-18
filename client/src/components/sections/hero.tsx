@@ -42,10 +42,17 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="text-gradient">{personalInfo.name}</span>
+              Hi, I'm <span className="text-gradient relative inline-block animate-text-wave">
+                {personalInfo.name}
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer-slow"></span>
+              </span>
             </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6">
-              <span>{displayText}</span>
+            <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6 flex items-center">
+              <span className="inline-block mr-2 animate-pulse-subtle">
+                <span className="inline-block w-3 h-3 bg-green-500 rounded-full"></span>
+              </span>
+              <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent font-bold">{displayText}</span>
+              <span className="animate-blink ml-1">|</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
               I build exceptional digital experiences with clean, efficient code. 
