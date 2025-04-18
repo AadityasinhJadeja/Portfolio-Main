@@ -61,10 +61,26 @@ export default function Skills() {
         <div className="max-w-4xl mx-auto animated-slide-up">
           <Tabs defaultValue="technical" className="w-full">
             <div className="flex justify-center mb-8">
-              <TabsList className="grid grid-cols-3 w-full max-w-md">
-                <TabsTrigger value="technical">Technical Skills</TabsTrigger>
-                <TabsTrigger value="tools">Tools</TabsTrigger>
-                <TabsTrigger value="core">Core Skills</TabsTrigger>
+              <TabsList className="grid grid-cols-3 w-full max-w-md overflow-hidden relative">
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-200 dark:bg-gray-700"></div>
+                <TabsTrigger value="technical" className="relative z-10 transition-all duration-300 hover:text-primary">
+                  <span className="relative">
+                    Technical Skills
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </span>
+                </TabsTrigger>
+                <TabsTrigger value="tools" className="relative z-10 transition-all duration-300 hover:text-primary">
+                  <span className="relative">
+                    Tools
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </span>
+                </TabsTrigger>
+                <TabsTrigger value="core" className="relative z-10 transition-all duration-300 hover:text-primary">
+                  <span className="relative">
+                    Core Skills
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                  </span>
+                </TabsTrigger>
               </TabsList>
             </div>
             
@@ -72,10 +88,11 @@ export default function Skills() {
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                 <h3 className="text-xl font-bold mb-6 text-center">Programming Languages</h3>
                 <div className="flex flex-wrap justify-center gap-3">
-                  {technicalSkills.map((skill) => (
+                  {technicalSkills.map((skill, index) => (
                     <Badge 
                       key={skill.id} 
-                      className="px-4 py-2 text-sm bg-blue-100 hover:bg-blue-200 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800"
+                      className="px-4 py-2 text-sm bg-blue-100 hover:bg-blue-200 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-800 skill-badge"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {skill.name}
                     </Badge>
@@ -88,10 +105,11 @@ export default function Skills() {
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                 <h3 className="text-xl font-bold mb-6 text-center">Tools & Frameworks</h3>
                 <div className="flex flex-wrap justify-center gap-3">
-                  {toolSkills.map((skill) => (
+                  {toolSkills.map((skill, index) => (
                     <Badge 
                       key={skill.id} 
-                      className="px-4 py-2 text-sm bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-800"
+                      className="px-4 py-2 text-sm bg-green-100 hover:bg-green-200 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-800 skill-badge"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {skill.name}
                     </Badge>
@@ -104,10 +122,11 @@ export default function Skills() {
               <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
                 <h3 className="text-xl font-bold mb-6 text-center">Core Expertise</h3>
                 <div className="flex flex-wrap justify-center gap-3">
-                  {coreSkills.map((skill) => (
+                  {coreSkills.map((skill, index) => (
                     <Badge 
                       key={skill.id} 
-                      className="px-4 py-2 text-sm bg-purple-100 hover:bg-purple-200 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                      className="px-4 py-2 text-sm bg-purple-100 hover:bg-purple-200 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 border border-purple-200 dark:border-purple-800 skill-badge"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {skill.name}
                     </Badge>
