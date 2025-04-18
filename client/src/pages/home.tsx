@@ -6,7 +6,7 @@ import Experience from "@/components/sections/experience";
 import Projects from "@/components/sections/projects";
 import Skills from "@/components/sections/skills";
 import Education from "@/components/sections/education";
-import Contact from "@/components/sections/contact";
+import Contact from "@/components/sections/contact-fixed";
 import { useEffect } from "react";
 
 export default function Home() {
