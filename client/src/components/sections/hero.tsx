@@ -54,26 +54,41 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#contact" 
-                className="px-6 py-3 bg-gradient text-white rounded-md shadow-md hover:shadow-lg transition-shadow"
+                className="px-6 py-3 bg-gradient text-white rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 btn-hover-effect"
               >
                 Get in Touch
               </a>
               <a 
                 href="#projects" 
-                className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-md hover:border-primary dark:hover:border-primary transition-colors"
+                className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-md hover:border-primary dark:hover:border-primary transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 dark:hover:bg-gray-800"
               >
-                View My Work
+                <span className="flex items-center">
+                  View My Work
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </span>
               </a>
             </div>
           </div>
           <div className="md:w-1/3 mt-12 md:mt-0 animate-fade-in">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 bg-gradient rounded-full opacity-20 blur-xl"></div>
+            <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto animate-float">
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient rounded-full opacity-20 blur-xl animate-pulse"></div>
+              
+              {/* Decorative elements */}
+              <div className="absolute w-12 h-12 bg-blue-500 rounded-full -top-4 -right-4 opacity-20 animate-float" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute w-8 h-8 bg-purple-500 rounded-full bottom-4 -left-4 opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
+              
+              {/* Image */}
               <img 
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
                 alt={personalInfo.name} 
-                className="relative rounded-full w-full h-full object-cover border-4 border-white dark:border-gray-800 shadow-lg"
+                className="relative rounded-full w-full h-full object-cover border-4 border-white dark:border-gray-800 shadow-lg transition-all duration-500 hover:shadow-2xl"
               />
+              
+              {/* Accent ring */}
+              <div className="absolute inset-0 border-4 border-transparent hover:border-primary/20 rounded-full transition-all duration-500"></div>
             </div>
           </div>
         </div>
