@@ -2,6 +2,7 @@ export interface Experience {
   id: number;
   title: string;
   company: string;
+  domain?: string; // Optional domain field
   period: string;
   description: string;
   technologies: string[];

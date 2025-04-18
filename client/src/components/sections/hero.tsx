@@ -47,12 +47,8 @@ export default function Hero() {
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer-slow"></span>
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6 flex items-center">
-              <span className="inline-block mr-2 animate-pulse-subtle">
-                <span className="inline-block w-3 h-3 bg-green-500 rounded-full"></span>
-              </span>
+            <h2 className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 mb-6">
               <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent font-bold">{displayText}</span>
-              <span className="animate-blink ml-1">|</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl">
               I build exceptional digital experiences with clean, efficient code. 

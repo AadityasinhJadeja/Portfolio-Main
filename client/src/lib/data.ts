@@ -21,7 +21,7 @@ export const personalInfo: PersonalInfo = {
   contactInfo: {
     location: "San Francisco, California, USA",
     email: "john@example.com",
-    phone: "+1 (123) 456-7890"
+    phone: ""
   },
   socialLinks: [
     {
@@ -56,7 +56,8 @@ export const experiences: Experience[] = [
     id: 1,
     title: "Senior Software Engineer",
     company: "Tech Innovations Inc.",
-    period: "2020 - Present",
+    domain: "AI & Machine Learning",
+    period: "2022 - Present",
     description: "Led development of the company's flagship product, improving performance by 40%. Managed a team of 5 developers and implemented CI/CD pipelines.",
     technologies: ["React", "Node.js", "AWS", "Docker"]
   },
@@ -64,17 +65,64 @@ export const experiences: Experience[] = [
     id: 2,
     title: "Frontend Developer",
     company: "WebSolutions Co.",
-    period: "2018 - 2020",
+    domain: "E-commerce",
+    period: "2020 - 2022",
     description: "Developed responsive web applications for various clients. Improved site performance and implemented modern UI libraries to enhance user experience.",
     technologies: ["JavaScript", "Vue.js", "SASS", "Webpack"]
   },
   {
     id: 3,
+    title: "Backend Engineer",
+    company: "DataTech Ltd.",
+    domain: "FinTech",
+    period: "2019 - 2020",
+    description: "Designed and implemented scalable backend systems for financial data processing. Created API services and optimized database performance.",
+    technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis"]
+  },
+  {
+    id: 4,
+    title: "Mobile Developer",
+    company: "AppGenius",
+    domain: "Healthcare",
+    period: "2018 - 2019",
+    description: "Developed mobile applications for healthcare providers. Implemented secure data handling and intuitive user interfaces for medical professionals.",
+    technologies: ["React Native", "Firebase", "Redux", "REST APIs"]
+  },
+  {
+    id: 5,
+    title: "DevOps Engineer",
+    company: "CloudSys",
+    domain: "Infrastructure",
+    period: "2017 - 2018",
+    description: "Managed cloud infrastructure and deployment pipelines. Improved system reliability and reduced deployment times by implementing automation.",
+    technologies: ["AWS", "Kubernetes", "Terraform", "CI/CD"]
+  },
+  {
+    id: 6,
+    title: "QA Engineer",
+    company: "QualityTech",
+    domain: "Software Quality",
+    period: "2016 - 2017",
+    description: "Developed automated testing frameworks and performed rigorous manual testing. Created comprehensive test documentation and reporting systems.",
+    technologies: ["Selenium", "Jest", "Cypress", "Jenkins"]
+  },
+  {
+    id: 7,
     title: "Junior Web Developer",
-    company: "Digital Agency Ltd.",
-    period: "2016 - 2018",
+    company: "Digital Agency",
+    domain: "Marketing & Advertising",
+    period: "2015 - 2016",
     description: "Built and maintained websites for small businesses. Collaborated with designers to implement pixel-perfect interfaces and ensure cross-browser compatibility.",
     technologies: ["HTML", "CSS", "jQuery", "PHP"]
+  },
+  {
+    id: 8,
+    title: "Junior Developer Intern",
+    company: "StartupHub",
+    domain: "SaaS Tools",
+    period: "2014 - 2015",
+    description: "Assisted in various aspects of application development. Learned best practices in software development and collaborated with senior developers.",
+    technologies: ["JavaScript", "Bootstrap", "MySQL", "Git"]
   }
 ];
 
@@ -84,8 +132,8 @@ export const projects: Project[] = [
     title: "E-commerce Platform",
     description: "A full-featured online store with payment processing, inventory management, and admin dashboard.",
     technologies: ["React", "Node.js", "MongoDB"],
-    demoUrl: "#",
-    codeUrl: "#",
+    demoUrl: "#projects",
+    codeUrl: "#projects",
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   },
   {
@@ -93,8 +141,8 @@ export const projects: Project[] = [
     title: "Task Management App",
     description: "A productivity application with task tracking, team collaboration, and custom reporting features.",
     technologies: ["Vue.js", "Express", "PostgreSQL"],
-    demoUrl: "#",
-    codeUrl: "#",
+    demoUrl: "#projects",
+    codeUrl: "#projects",
     imageUrl: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
   },
   {
@@ -102,9 +150,72 @@ export const projects: Project[] = [
     title: "Fitness Tracking App",
     description: "Mobile application for tracking workouts, nutrition, and progress with data visualization.",
     technologies: ["React Native", "Firebase", "Redux"],
-    demoUrl: "#",
-    codeUrl: "#",
+    demoUrl: "#projects",
+    codeUrl: "#projects",
     imageUrl: "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    id: 4,
+    title: "Real-time Chat Application",
+    description: "Instant messaging platform with user authentication, group chats, and media sharing capabilities.",
+    technologies: ["Socket.io", "React", "Express", "MongoDB"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+  },
+  {
+    id: 5,
+    title: "Personal Finance Dashboard",
+    description: "Financial management tool with expense tracking, budget planning, and investment monitoring features.",
+    technologies: ["Angular", "D3.js", "Node.js", "MySQL"],
+    demoUrl: "#projects",
+    codeUrl: "#projects", 
+    imageUrl: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    id: 6,
+    title: "Weather Forecast App",
+    description: "Location-based weather application with 7-day forecasts, radar maps, and severe weather alerts.",
+    technologies: ["React", "Weather API", "Redux", "Leaflet"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+  },
+  {
+    id: 7,
+    title: "Recipe Finder Application",
+    description: "Culinary app that allows users to search recipes by ingredients, dietary restrictions, and preparation time.",
+    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    id: 8,
+    title: "Virtual Event Platform",
+    description: "Online conference solution with video streaming, interactive sessions, and networking capabilities.",
+    technologies: ["WebRTC", "React", "Node.js", "Redis"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+  },
+  {
+    id: 9,
+    title: "Language Learning Platform",
+    description: "Educational app with lessons, quizzes, and speech recognition for language acquisition.",
+    technologies: ["React", "Express", "MongoDB", "Web Speech API"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+  },
+  {
+    id: 10,
+    title: "Smart Home Control System",
+    description: "IoT application for monitoring and controlling smart home devices with automation capabilities.",
+    technologies: ["React", "Node.js", "MQTT", "Raspberry Pi"],
+    demoUrl: "#projects",
+    codeUrl: "#projects",
+    imageUrl: "https://images.unsplash.com/photo-1558002038-2910a2020217?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
   }
 ];
 

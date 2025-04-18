@@ -72,34 +72,36 @@ export default function Experience() {
           Work <span className="text-gradient">Experience</span>
         </h2>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {experiences.map((experience, index) => (
-            <div key={experience.id} className="timeline-item relative pl-8 pb-8 animated-slide-up">
-              <div className="timeline-dot relative">
-                <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-primary -translate-x-1/2"></div>
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                  <div className="flex flex-wrap justify-between items-start mb-2">
-                    <h3 className="text-xl font-bold">{experience.title}</h3>
-                    <span className="text-sm font-medium text-primary px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                      {experience.period}
-                    </span>
+            <div key={experience.id} className="animated-slide-up">
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md h-full">
+                <div className="flex flex-wrap justify-between items-start mb-2">
+                  <h3 className="text-xl font-bold">{experience.title}</h3>
+                  <span className="text-sm font-medium text-primary px-3 py-1 bg-blue-100 dark:bg-blue-900/30 rounded-full">
+                    {experience.period}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 mb-1">
+                  <div className="w-10 h-10 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-300 overflow-hidden">
+                    {getCompanyIcon(experience.company)}
                   </div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-10 h-10 flex items-center justify-center bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-300 overflow-hidden company-icon-container animate-bounce-subtle">
-                      {getCompanyIcon(experience.company)}
-                    </div>
+                  <div>
                     <h4 className="text-lg text-gray-600 dark:text-gray-300">{experience.company}</h4>
+                    {experience.domain && (
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{experience.domain}</p>
+                    )}
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {experience.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {experience.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mt-3 mb-4">
+                  {experience.description}
+                </p>
+                <div className="mt-auto flex flex-wrap gap-2">
+                  {experience.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
