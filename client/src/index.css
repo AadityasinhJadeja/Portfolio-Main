@@ -152,4 +152,90 @@
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }
+  
+  .animate-shimmer-slow {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 25%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 4s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes bounce-subtle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  .animate-bounce-subtle {
+    animation: bounce-subtle 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s ease-in-out infinite;
+  }
+  
+  @keyframes text-wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-4px);
+    }
+    75% {
+      transform: translateY(4px);
+    }
+  }
+  
+  .animate-text-wave {
+    display: inline-block;
+    animation: text-wave 5s ease-in-out infinite;
+  }
+  
+  /* Interactive interests */
+  .interest-card {
+    @apply transition-all duration-300 transform hover:scale-110 hover:shadow-md;
+  }
+  
+  .interest-icon {
+    @apply transition-all duration-300;
+  }
+  
+  .interest-card:hover .interest-icon {
+    @apply text-primary transform rotate-12;
+  }
+  
+  /* Company icon container animation */
+  .company-icon-container {
+    @apply transition-all duration-500;
+  }
+  
+  .company-icon-container:hover {
+    @apply transform scale-110 bg-blue-200 dark:bg-blue-800/50;
+  }
 }
