@@ -197,8 +197,8 @@ app.use((req, res, next) => {
   } else {
     serveStatic(app);
   }
-  const PORT = 5e3;
-  app.listen(PORT, "localhost", () => {
+  const PORT = Number(process.env.PORT) || 5e3;
+  app.listen(PORT, "0.0.0.0", () => {
     log(`serving on port ${PORT}`);
   });
 })();
