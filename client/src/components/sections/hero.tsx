@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { personalInfo } from "@/lib/data";
-import ProfileImage from '/Users/aadityasinhjadeja/Downloads/DataInsightHub/client/hero.png';
+import ProfileImage from '/Users/aadityasinhjadeja/Downloads/DataInsightHub/server/IMG_9806.jpg.png';
 
 export default function Hero() {
   const [displayText, setDisplayText] = useState("");
