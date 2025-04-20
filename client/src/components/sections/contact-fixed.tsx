@@ -101,7 +101,7 @@ export default function Contact() {
             
             <div className="text-center mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
               <p className="text-gray-500 dark:text-gray-400">
-                Thank you for visiting my portfolio. I'm currently {personalInfo.availability.toLowerCase()}.
+                Thank you for visiting my portfolio. I'm currently looking for {personalInfo.availability}.
               </p>
             </div>
           </div>

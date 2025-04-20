@@ -3,7 +3,13 @@ import { personalInfo, interests } from "@/lib/data";
 import { 
   FaCode, FaMobileAlt, FaPaintBrush, 
   FaDatabase, FaServer, FaCloud,
-  FaLaptopCode, FaBrain, FaGamepad
+  FaLaptopCode, FaBrain, FaGamepad,
+  FaRobot,
+  FaVideo,
+  FaProductHunt,
+  FaFilm,
+  FaPodcast,
+  FaMandalorian
 } from "react-icons/fa";
 
 export default function About() {
@@ -13,7 +19,7 @@ export default function About() {
   // Function to get the icon component for an interest
   const getInterestIcon = (iconName: string) => {
     const iconMap: Record<string, JSX.Element> = {
-      "fa-code": <FaCode className="text-3xl interest-icon" />,
+      "fa-robot": <FaRobot className="text-3xl interest-icon" />,
       "fa-mobile-alt": <FaMobileAlt className="text-3xl interest-icon" />,
       "fa-paint-brush": <FaPaintBrush className="text-3xl interest-icon" />,
       "fa-database": <FaDatabase className="text-3xl interest-icon" />,
@@ -22,6 +28,10 @@ export default function About() {
       "fa-laptop-code": <FaLaptopCode className="text-3xl interest-icon" />,
       "fa-brain": <FaBrain className="text-3xl interest-icon" />,
       "fa-gamepad": <FaGamepad className="text-3xl interest-icon" />,
+      "fa-marketing": <FaVideo className="text-3xl interest-icon" />,
+      "fa-product-hunt": <FaProductHunt className="text-3xl interest-icon" />,
+      "fa-video": <FaFilm className="text-3xl interest-icon" />,
+      "fa-podcast": <FaPodcast className="text-3xl interest-icon" />,
     };
     
     return iconMap[iconName] || <FaCode className="text-3xl interest-icon" />;

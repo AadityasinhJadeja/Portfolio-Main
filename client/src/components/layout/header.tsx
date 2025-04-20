@@ -36,8 +36,8 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="text-xl font-bold">
-          <span className="text-gradient">John</span>
-          <span className="text-gray-800 dark:text-white">Doe</span>
+          <span className="text-gradient">Aadityasinh</span>
+          <span className="text-gray-800 dark:text-white"> Jadeja</span>
         </a>
         
         {/* Desktop Navigation */}

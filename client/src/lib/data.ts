@@ -9,44 +9,35 @@ import {
 } from './types';
 
 export const personalInfo: PersonalInfo = {
-  name: "John Doe",
-  roles: ["Full Stack Developer", "UI/UX Designer", "Problem Solver"],
-  email: "john@example.com",
-  location: "San Francisco, CA",
-  availability: "Freelance / Full-time",
+  name: "Aadityasinh Jadeja",
+  roles: ["Data Scientist", "Product Manager", "AI Business Fellow"],
+  email: "jadeja.aadityasinh2@gmail.com",
+  location: "Los Angeles, CA",
+  availability: "Full-time / Co-Op",
   about: [
-    "I'm a passionate developer with over 5 years of experience creating web and mobile applications. I specialize in building responsive, user-friendly interfaces and robust backends.",
-    "When I'm not coding, you can find me hiking, reading, or exploring new coffee shops. I believe in continuous learning and pushing the boundaries of what's possible with technology."
+    
+    "I’m a data-driven problem solver who loves building AI-powered solutions that actually make a difference. My journey blends product strategy, data science, and storytelling — whether it's analyzing behavior patterns, launching digital experiences, or optimizing performance through insights.",
+    "Over the past few years, I’ve worked across industries — from space research at ISRO to marketing strategy for 500K+ audiences, to supporting students at CSULB. Every experience has shaped the way I think about products, people, and impact.",
+    "Outside of work, you'll find me mentoring students, experimenting with Notion dashboards, or grabbing coffee while thinking about the next big idea to build."
+    
   ],
   contactInfo: {
-    location: "San Francisco, California, USA",
-    email: "john@example.com",
+    location: "Los Angeles, California, USA",
+    email: "jadeja.aadityasinh2@gmail.com",
     phone: ""
   },
   socialLinks: [
     {
       id: 1,
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/AadityasinhJadeja",
       icon: "fa-github"
     },
     {
       id: 2,
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/aadityasinh-jadeja/",
       icon: "fa-linkedin-in"
-    },
-    {
-      id: 3,
-      name: "Twitter",
-      url: "https://twitter.com",
-      icon: "fa-twitter"
-    },
-    {
-      id: 4,
-      name: "Dribbble",
-      url: "https://dribbble.com",
-      icon: "fa-dribbble"
     }
   ]
 };
@@ -54,208 +45,192 @@ export const personalInfo: PersonalInfo = {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: "Senior Software Engineer",
-    company: "Tech Innovations Inc.",
-    domain: "AI & Machine Learning",
-    period: "2022 - Present",
-    description: "Led development of the company's flagship product, improving performance by 40%. Managed a team of 5 developers and implemented CI/CD pipelines.",
-    technologies: ["React", "Node.js", "AWS", "Docker"]
+    title: "Data Scientist Intern",
+    company: "Labcorp",
+    domain: "Artificial Intelligence(AI)",
+    period: "Incoming Summer 2025",
+    description: "Joining Labcorp’s AI team to build predictive models and GenAI pipelines for biomedical datasets.",
+    technologies: ["Python", "Machine Learning", "AWS", "GenAI"]
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "WebSolutions Co.",
-    domain: "E-commerce",
-    period: "2020 - 2022",
-    description: "Developed responsive web applications for various clients. Improved site performance and implemented modern UI libraries to enhance user experience.",
-    technologies: ["JavaScript", "Vue.js", "SASS", "Webpack"]
+    title: "Growth Product Manager",
+    company: "Yudi J",
+    domain: "EdTech - Product Growth",
+    period: "March 2025 - Present",
+    description: "Led growth strategy for a digital product serving 2,000+ users, focused on helping international students land jobs in the U.S. Designed and executed initiatives across user onboarding, referral programs, and community engagement to improve retention and conversions.",
+    technologies: ["Growth Strategy", "Conversion Funnel", "Product Optimization", "Notion"]
   },
   {
     id: 3,
-    title: "Backend Engineer",
-    company: "DataTech Ltd.",
-    domain: "FinTech",
-    period: "2019 - 2020",
-    description: "Designed and implemented scalable backend systems for financial data processing. Created API services and optimized database performance.",
-    technologies: ["Java", "Spring Boot", "PostgreSQL", "Redis"]
+    title: "AI Business Fellow",
+    company: "Perplexity",
+    domain: "Artificial Intelligence(AI)",
+    period: "March 2025 - Present",
+    description: "A competitive program designed to develop AI leaders. Engaging in fireside chats with top AI executives, hands-on workshops, and industry networking to explore AI’s business impact and drive adoption in real-world workflows.",
+    technologies: ["GenAI", "LLM", "Replit", "Promt Engineering"]
   },
   {
     id: 4,
-    title: "Mobile Developer",
-    company: "AppGenius",
-    domain: "Healthcare",
-    period: "2018 - 2019",
-    description: "Developed mobile applications for healthcare providers. Implemented secure data handling and intuitive user interfaces for medical professionals.",
-    technologies: ["React Native", "Firebase", "Redux", "REST APIs"]
+    title: "Peer Mentor",
+    company: "California State University, Long Beach",
+    domain: "Community Engagement",
+    period: "March 2025 - Present",
+    description: "I designed and led mental‑health awareness events and peer‑support sessions to foster student well‑being. Promoted campus counseling services and facilitated group discussions to help peers navigate stress, anxiety, and academic challenges. Leveraged social media and targeted outreach to build an inclusive, supportive community.",
+    technologies: ["Canva", "Marketing"]
   },
   {
     id: 5,
-    title: "DevOps Engineer",
-    company: "CloudSys",
-    domain: "Infrastructure",
-    period: "2017 - 2018",
-    description: "Managed cloud infrastructure and deployment pipelines. Improved system reliability and reduced deployment times by implementing automation.",
-    technologies: ["AWS", "Kubernetes", "Terraform", "CI/CD"]
+    title: "Product Marketing Manager",
+    company: "Yudi J",
+    domain: "EdTech - Content & Digital Marketing",
+    period: "June 2024 - August 2024",
+    description: "Led content and product strategy for a digital platform serving 500,000+ international students. Translated audience behavior and competitive insights into a data-driven content roadmap. Worked cross-functionally to align product goals with user needs, improved platform engagement, and supported GTM planning for digital offerings.",
+    technologies: ["Product Strategy", "Competetive Analysis", "Market Research", "Data Analysis", "Miro", "Notion"]
   },
   {
     id: 6,
-    title: "QA Engineer",
-    company: "QualityTech",
-    domain: "Software Quality",
-    period: "2016 - 2017",
-    description: "Developed automated testing frameworks and performed rigorous manual testing. Created comprehensive test documentation and reporting systems.",
-    technologies: ["Selenium", "Jest", "Cypress", "Jenkins"]
+    title: "Researcher/Data Scientist",
+    company: "Indian Space Research Organization (ISRO)",
+    domain: "Space Research",
+    period: "January 2024 - April 2024",
+    description: "Built automation tool using MATLAB to handle huge satellite datasets – no more manual work! Created a full report generation system that helps scientists present their findings with ease. Honestly, it's one of the proudest things I’ve built – knowing that something I made will be used by researchers for years.",
+    technologies: ["Data Analysis", "MATLAB", "Report Generation", "Data Visualization", "Satellite Payload"]
   },
+
   {
     id: 7,
-    title: "Junior Web Developer",
-    company: "Digital Agency",
-    domain: "Marketing & Advertising",
-    period: "2015 - 2016",
-    description: "Built and maintained websites for small businesses. Collaborated with designers to implement pixel-perfect interfaces and ensure cross-browser compatibility.",
-    technologies: ["HTML", "CSS", "jQuery", "PHP"]
+    title: "Event Manager",
+    company: "Machine Learning Club",
+    domain: "AI / Machine Learning",
+    period: "January 2023 - December 2023",
+    description: "Organized and executed 10+ large-scale events featuring professionals from top Data Science and AI companies. Coordinated cross-functional teams for speaker outreach, logistics, and promotion. Increased member engagement through value-driven programming and continuous feedback cycles.",
+    technologies: [" Event strategy", "Operational execution", "Community building", "Stakeholder management", "Marketing"]
   },
+  
   {
     id: 8,
-    title: "Junior Developer Intern",
-    company: "StartupHub",
-    domain: "SaaS Tools",
-    period: "2014 - 2015",
-    description: "Assisted in various aspects of application development. Learned best practices in software development and collaborated with senior developers.",
-    technologies: ["JavaScript", "Bootstrap", "MySQL", "Git"]
-  }
+    title: "Project Manager",
+    company: "F13 Technologies",
+    domain: "Cloud Computing",
+    period: "July 2022 - October 2022",
+    description: "Managed a cross-functional team to enhance product scalability and reduce cloud infrastructure costs. Utilized AWS performance insights to identify service redundancies, improving overall product efficiency. Delivered high-impact reports and led the prioritization of roadmap features based on technical feasibility and business value.",
+    technologies: ["AWS", "Stakeholder Communication", "Product Life Cycle", "Slack"]
+  },
 ];
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-featured online store with payment processing, inventory management, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    title: "HydroVision",
+    description: "A data science project tackling California’s water contamination crisis by analyzing 2M+ records from 1903–2024. Used logistic regression (95% accuracy) to classify water quality and uncover historical, regional toxicity trends.",
+    technologies: ["Python", "Pandas", "Logistic Regression", "Data Analysis","Scikit-learn"],
     demoUrl: "#projects",
     codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    imageUrl: "https://static.wixstatic.com/media/f579f6_281d56daa4fd4eb28b2ed41006df9018~mv2.jpg/v1/fill/w_640,h_400,al_c,q_80,enc_avif,quality_auto/f579f6_281d56daa4fd4eb28b2ed41006df9018~mv2.jpg"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A productivity application with task tracking, team collaboration, and custom reporting features.",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    title: "Toy Story GPT",
+    description: "Built a GPT-style language model using PyTorch to generate Toy Story-themed text. Applied self-attention and transformer techniques to enhance character-specific output accuracy.",
+    technologies: ["PyTorch", "Transformers", "Deep Learning", "Natural Language Processing", "GenAI"],
     demoUrl: "#projects",
     codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+    imageUrl: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/02/toy-story-5.jpg"
   },
   {
     id: 3,
-    title: "Fitness Tracking App",
-    description: "Mobile application for tracking workouts, nutrition, and progress with data visualization.",
-    technologies: ["React Native", "Firebase", "Redux"],
+    title: "Sales & Customer Insights Dashboard",
+    description: "Created an interactive Tableau dashboard for customer and sales analytics, identifying top buyers, seasonal sales patterns, and key product trends. Enabled better decision-making with dynamic filters.",
+    technologies: ["Tableau", "Data Analytics", "KPI Tracking", "Data Visualization"],  
     demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    codeUrl: "https://github.com/AadityasinhJadeja/ToyStory_GPT_LLM.git",
+    imageUrl: "https://www.highspot.com/wp-content/uploads/2023/07/essential-sales-skills.jpg"
   },
   {
     id: 4,
-    title: "Real-time Chat Application",
-    description: "Instant messaging platform with user authentication, group chats, and media sharing capabilities.",
-    technologies: ["Socket.io", "React", "Express", "MongoDB"],
+    title: "Solar X-Ray Intensity Analysis",
+    description: "Analyzed solar monitor data to identify intensity trends and anomalies. Improved data readability by 50% using Python-based visualizations and Excel, aiding scientific interpretation.",
+    technologies: ["Python", "Data Cleaning", "Scientific Analysis", "Excel"],
     demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+    codeUrl: "https://github.com/AadityasinhJadeja/solar-xray-monitor.git",
+    imageUrl: "https://cff2.earth.com/uploads/2025/04/16151643/sun_geomagnetic-solar-storm_cme_auroras_1m.webp"
   },
   {
     id: 5,
-    title: "Personal Finance Dashboard",
-    description: "Financial management tool with expense tracking, budget planning, and investment monitoring features.",
-    technologies: ["Angular", "D3.js", "Node.js", "MySQL"],
+    title: "Product Purchase Prediction",
+    description: "Deployed a Streamlit-based app that predicts product purchase behavior using K-Nearest Neighbors. Trained on social network data to classify intent based on age and salary.",
+    technologies: ["Machine Learning", "KNN", "Scikit-Learn", "Binary Classification", "Streamlit"],
     demoUrl: "#projects",
     codeUrl: "#projects", 
-    imageUrl: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    imageUrl: "https://www.hotelestequendama.com.co/assets/cache/uploads/tequendama-hoteles/destinos/cali/shopping/1920x1080/shopping-compras-cali-tequendama-hoteles-colombia-1708514344.jpeg"
   },
   {
     id: 6,
-    title: "Weather Forecast App",
+    title: "Notezipper",
     description: "Location-based weather application with 7-day forecasts, radar maps, and severe weather alerts.",
-    technologies: ["React", "Weather API", "Redux", "Leaflet"],
+    technologies: ["React"," JavaScript", "HTML", "CSS"],
     demoUrl: "#projects",
-    codeUrl: "#projects",
+    codeUrl: "https://github.com/AadityasinhJadeja/NoteZipper.git",
     imageUrl: "https://images.unsplash.com/photo-1530908295418-a12e326966ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
   },
   {
     id: 7,
-    title: "Recipe Finder Application",
-    description: "Culinary app that allows users to search recipes by ingredients, dietary restrictions, and preparation time.",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    title: "HERMS - Healthcare Equipment Rental Management System",
+    description: "Location-based weather application with 7-day forecasts, radar maps, and severe weather alerts.",
+    technologies: ["SQL","Healthcare"],
     demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    codeUrl: "",
+    imageUrl: ""
   },
   {
     id: 8,
-    title: "Virtual Event Platform",
-    description: "Online conference solution with video streaming, interactive sessions, and networking capabilities.",
-    technologies: ["WebRTC", "React", "Node.js", "Redis"],
+    title: "FoodFlow AI",
+    description: "Location-based weather application with 7-day forecasts, radar maps, and severe weather alerts.",
+    technologies: ["React"," JavaScript", "HTML", "CSS"],
     demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-  },
-  {
-    id: 9,
-    title: "Language Learning Platform",
-    description: "Educational app with lessons, quizzes, and speech recognition for language acquisition.",
-    technologies: ["React", "Express", "MongoDB", "Web Speech API"],
-    demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-  },
-  {
-    id: 10,
-    title: "Smart Home Control System",
-    description: "IoT application for monitoring and controlling smart home devices with automation capabilities.",
-    technologies: ["React", "Node.js", "MQTT", "Raspberry Pi"],
-    demoUrl: "#projects",
-    codeUrl: "#projects",
-    imageUrl: "https://images.unsplash.com/photo-1558002038-2910a2020217?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+    codeUrl: "",
+    imageUrl: ""
   }
 ];
 
 export const educations: Education[] = [
   {
     id: 1,
-    degree: "Master of Computer Science",
-    institution: "Stanford University",
-    period: "2014 - 2016",
-    description: "Specialized in Artificial Intelligence and Machine Learning. Graduated with honors and completed a thesis on neural networks for natural language processing.",
-    gpa: "3.9/4.0"
+    degree: "Master of Science in Information Systems",
+    institution: "California State University, Long Beach",
+    period: "May 2026",
+    description: "Focused on bridging technology with business through courses in Data Analysis, System Design & Analysis, Deep Learning, Responsible AI, AWS, and Cybersecurity. Currently actively applying concepts to real-world projects and internships.",
+    gpa: "4.0/4.0"
   },
   {
     id: 2,
-    degree: "Bachelor of Science in Computer Engineering",
-    institution: "MIT",
-    period: "2010 - 2014",
-    description: "Studied computer architecture, algorithms, and software engineering. Participated in multiple hackathons and led the university's programming club.",
-    gpa: "3.8/4.0"
+    degree: "Bachelor of Technology - Information Technology",
+    institution: "Birla Vishvakarma Mahavidyalaya, Anand",
+    period: "May 2024",
+    description: "Built a strong foundation in programming, databases, and analytics. Explored Big Data, OOPs, Operating Systems, Computer Networking, Java, and Python while developing a passion for solving real problems using tech.",
+    gpa: "3.4/4.0"
   }
 ];
 
 export const certifications: Certification[] = [
   {
     id: 1,
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    year: "2022"
+    name: "Google Professional Project Management",
+    issuer: "Google",
+    year: "2025"
   },
   {
     id: 2,
-    name: "Google Professional Cloud Developer",
-    issuer: "Google Cloud",
-    year: "2021"
+    name: "Google AI Essentials",
+    issuer: "Google",
+    year: "2024"
   },
   {
     id: 3,
-    name: "Certified Scrum Master",
-    issuer: "Scrum Alliance",
-    year: "2020"
+    name: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    year: "2022"
   }
 ];
 
@@ -263,44 +238,44 @@ export const skills: Skill[] = [
   // Technical Skills (Programming Languages)
   {
     id: 1,
-    name: "JavaScript",
-    category: "technical"
-  },
-  {
-    id: 2,
-    name: "TypeScript",
-    category: "technical"
-  },
-  {
-    id: 3,
     name: "Python",
     category: "technical"
   },
   {
+    id: 3,
+    name: "Libraries: NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow",
+    category: "technical"
+  },
+  {
+    id: 3,
+    name: "JavaScript",
+    category: "technical"
+  },
+  {
     id: 4,
-    name: "Java",
+    name: "MATLAB",
     category: "technical"
   },
   {
     id: 5,
-    name: "C++",
+    name: "SQL",
     category: "technical"
   },
   
   // Tools
   {
     id: 6,
-    name: "React",
+    name: "Tableau",
     category: "tool"
   },
   {
     id: 7,
-    name: "Node.js",
+    name: "Amazon Web Services (AWS)",
     category: "tool"
   },
   {
     id: 8,
-    name: "Docker",
+    name: "Microsoft Excel",
     category: "tool"
   },
   {
@@ -310,44 +285,84 @@ export const skills: Skill[] = [
   },
   {
     id: 10,
-    name: "VS Code",
+    name: "Miro",
     category: "tool"
   },
   {
     id: 11,
-    name: "AWS",
+    name: "Jira",
     category: "tool"
   },
-  
-  // Core Skills
   {
     id: 12,
-    name: "Machine Learning",
-    category: "core"
+    name: "Slack",
+    category: "tool"
   },
   {
     id: 13,
-    name: "Generative AI",
-    category: "core"
+    name: "Notion",
+    category: "tool"
   },
   {
     id: 14,
+    name: "Canva",
+    category: "tool"
+  },
+  {
+    id: 15,
+    name: "Trello",
+    category: "tool"
+  },
+  {
+    id: 16,
+    name: "IBM SPSS",
+    category: "tool"
+  },
+
+  // Core Skills
+  {
+    id: 17,
+    name: "Requirement Gathering",
+    category: "core"
+  },
+  {
+    id: 18,
+    name: "Data Analysis",
+    category: "core"
+  },
+  {
+    id: 19,
     name: "Supervised Learning",
     category: "core"
   },
   {
-    id: 15,
-    name: "Computer Vision",
+    id: 20,
+    name: "Unsupervised Learning",
     category: "core"
   },
   {
-    id: 16,
-    name: "Natural Language Processing",
+    id: 21,
+    name: "Data Visualization",
     category: "core"
   },
   {
-    id: 17,
-    name: "Problem Solving",
+    id: 22,
+    name: "Product Roadmap",
+    category: "core"
+  },
+  {
+    id: 23,
+    name: "Stakeholder Communication",
+    category: "core"
+  },
+  {
+    id: 24,
+    name: "Agile Methodologies",
+    category: "core"
+  },
+  {
+    id: 25,
+    name: "Scrum",
     category: "core"
   }
 ];
@@ -355,32 +370,32 @@ export const skills: Skill[] = [
 export const interests: Interest[] = [
   {
     id: 1,
-    name: "Web Development",
-    icon: "fa-code"
+    name: "Artificial Intelligence",
+    icon: "fa-robot"
   },
   {
     id: 2,
-    name: "Mobile Apps",
-    icon: "fa-mobile-alt"
+    name: "Product Management",
+    icon: "fa-product-hunt"
   },
   {
     id: 3,
-    name: "UI/UX Design",
-    icon: "fa-paint-brush"
+    name: "Marketing",
+    icon: "fa-marketing"
   },
   {
     id: 4,
-    name: "Databases",
-    icon: "fa-database"
+    name: "Cloud Computing",
+    icon: "fa-cloud"
   },
   {
     id: 5,
-    name: "Backend Systems",
-    icon: "fa-server"
+    name: "Watching Movies",
+    icon: "fa-video"
   },
   {
     id: 6,
-    name: "Cloud Computing",
-    icon: "fa-cloud"
+    name: "Listening to Podcasts",
+    icon: "fa-podcast"
   }
 ];
